@@ -6,7 +6,7 @@ const Header = () => {
     <header className="bg-blue-900 text-white shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
-        <h1 className="text-2xl font-bold">Vaitri Finance</h1>
+        <h1 className="text-2xl font-bold">Loan Finance</h1>
 
         {/* Navigation Links */}
         <nav>
