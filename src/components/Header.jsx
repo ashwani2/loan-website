@@ -30,7 +30,9 @@ const Header = () => {
     <header className="bg-blue-900 text-white shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
-        <h1 className="text-2xl font-bold">Loan Finance</h1>
+        <Link to="/" className="text-2xl font-bold hover:text-blue-300 transition">
+          Loan Finance
+        </Link>
 
         {/* Hamburger Menu (Mobile) */}
         <button
@@ -49,6 +51,7 @@ const Header = () => {
           <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 p-4 md:p-0">
             {[
               { name: "Home", path: "/" },
+              { name: "Admin", path: "/admin/login" },
               { name: "About", path: "/about" },
               { name: "EMI Calculator", path: "/emi-calculator" },
               { name: "Contact", path: "/contact" },
