@@ -17,7 +17,7 @@ import About from "./components/About";
 import AdminLogin from "./components/admin/Login";
 import AdminDashboard from "./components/admin/Dashboard";
 import LoanForm from "./components/loans/LoanForm";
-import WhatsAppButton from "./components/WhatsAppButton";
+import WhatsAppButton from "./components/WhatsappButton";
 
 const AppLayout = ({ children }) => {
   const location = useLocation();
