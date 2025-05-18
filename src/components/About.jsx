@@ -79,59 +79,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Leadership Team */}
-      <div className="py-16 px-4 bg-blue-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            Meet Our <span className="text-blue-600">Leadership</span>
-          </h2>
-          
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {/* Team Member 1 */}
-            <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <img 
-                src="/images/team1.jpg" 
-                alt="Rahul Sharma" 
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-bold text-gray-800">Rahul Sharma</h3>
-              <p className="text-blue-600 mb-2">Founder & CEO</p>
-              <p className="text-gray-600 text-sm">
-                Former Head of Digital Banking at HDFC with 15+ years in fintech innovation.
-              </p>
-            </div>
-            
-            {/* Team Member 2 */}
-            <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <img 
-                src="/images/team2.jpg" 
-                alt="Priya Patel" 
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-bold text-gray-800">Priya Patel</h3>
-              <p className="text-blue-600 mb-2">Chief Technology Officer</p>
-              <p className="text-gray-600 text-sm">
-                AI and blockchain expert from IIT Bombay with a passion for financial inclusion.
-              </p>
-            </div>
-            
-            {/* Team Member 3 */}
-            <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <img 
-                src="/images/team3.jpg" 
-                alt="Arjun Mehta" 
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-bold text-gray-800">Arjun Mehta</h3>
-              <p className="text-blue-600 mb-2">Chief Risk Officer</p>
-              <p className="text-gray-600 text-sm">
-                12 years experience in credit risk management at ICICI and Axis Bank.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* CTA Section */}
       <div className="py-16 px-4 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto text-center">

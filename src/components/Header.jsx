@@ -2,12 +2,6 @@ import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 
-const loans = [
-  { name: "Credit Card", path: "/loans/credit-card" },
-  { name: "Business Loan", path: "/loans/business-loan" },
-  { name: "Home Loan", path: "/loans/home-loan" },
-  { name: "Gold Loan", path: "/loans/gold-loan" },
-];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +25,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold hover:text-blue-300 transition">
-          Loan Finance
+          FastFi Connect
         </Link>
 
         {/* Hamburger Menu (Mobile) */}
@@ -85,7 +79,7 @@ const Header = () => {
                   {[
                     { name: "Credit Card", path: "/loans/credit-card" },
                     { name: "Business Loan", path: "/loans/business-loan" },
-                    { name: "Digital Personal Loan", path: "/loans/personal-loan" },
+                    { name: "Digital Personal Loan", path: "/loans/digital-personal-loan" },
                     { name: "Home Loan", path: "/loans/home-loan" },
                     { name: "Gold Loan", path: "/loans/gold-loan" },
                   ].map((loan, index) => (
@@ -95,6 +89,7 @@ const Header = () => {
                         className="block px-4 py-2 hover:bg-blue-100 transition"
                         onClick={() => setIsDropdownOpen(false)}
                       >
+                        {console.log(loan.name,"loan.name", loan.path)}
                         {loan.name}
                       </Link>
                     </li>

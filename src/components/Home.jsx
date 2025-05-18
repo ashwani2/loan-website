@@ -42,25 +42,25 @@ const Home = () => {
             {
               name: "Credit Card",
               icon: "💳",
-              color: "bg-purple-100",
+              color: "bg-blue-100",
               path: "/loans/credit-card",
             },
             {
               name: "Business Loan",
               icon: "📂",
-              color: "bg-yellow-100",
+              color: "bg-blue-200",
               path: "/loans/business-loan",
             },
             {
               name: "Home Loan",
               icon: "🏡",
-              color: "bg-green-100",
+              color: "bg-blue-100",
               path: "/loans/home-loan",
             },
             {
               name: "Gold Loan",
               icon: "🪙",
-              color: "bg-yellow-200",
+              color: "bg-blue-200",
               path: "/loans/gold-loan",
             },
             {
@@ -120,10 +120,10 @@ const Home = () => {
           </div>
           <div className="flex justify-center">
             <div className="space-y-4">
-              <div className="bg-green-100 p-4 rounded-lg shadow">
+              <div className="bg-blue-100 p-4 rounded-lg shadow">
                 Save on your LIC Housing Finance Ltd
               </div>
-              <div className="bg-yellow-100 p-4 rounded-lg shadow">
+              <div className="bg-blue-200 p-4 rounded-lg shadow">
                 Get a Gold Loan without EMI*
               </div>
             </div>
@@ -144,7 +144,7 @@ const Home = () => {
             </p>
           </div>
           <div className="flex justify-center">
-            <div className="bg-purple-100 p-8 rounded-xl shadow-md">
+            <div className="bg-blue-100 p-8 rounded-xl shadow-md">
               <p className="text-2xl font-bold text-gray-800">₹6,31,336</p>
               <p className="text-gray-700">Savings</p>
             </div>
@@ -152,14 +152,14 @@ const Home = () => {
         </div>
       </div>
 
-      {/* 3Cs of Learning Section */}
-      <section className="bg-yellow-200 py-12 px-6">
+      {/* 3Cs of Learning Section - Changed from yellow-200 to blue gradient */}
+      <section className="bg-gradient-to-r from-blue-600 to-blue-700 py-12 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
           {/* Text and Cards */}
           <div className="md:w-2/3 space-y-8">
-            <h2 className="text-4xl font-bold text-gray-800">
+            <h2 className="text-4xl font-bold text-white">
               Reclaim control over your personal finance <br />
-              with our <span className="text-blue-600">3Cs of Learning</span>
+              with our <span className="text-blue-200">3Cs of Learning</span>
             </h2>
 
             {/* Cards */}
@@ -214,7 +214,7 @@ const Home = () => {
       </section>
 
       {/* Learning Center Section */}
-      <div ref={learningSectionRef} className="py-16 bg-blue-700 text-white">
+      <div ref={learningSectionRef} className="py-16 bg-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <h3 className="text-3xl font-bold mb-6">Learning Center</h3>
           <p className="text-blue-200 mb-12">
@@ -273,7 +273,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <section className="bg-gray-50 py-12 px-6">
+      <section className="bg-blue-50 py-12 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">
             Frequently Asked Questions
@@ -285,7 +285,7 @@ const Home = () => {
             <details className="group bg-white p-5 rounded-xl shadow-md">
               <summary className="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
                 How do I get the cheapest home loan?
-                <span className="ml-2 group-open:rotate-45 transform transition-transform text-2xl">
+                <span className="ml-2 group-open:rotate-45 transform transition-transform text-2xl text-blue-600">
                   +
                 </span>
               </summary>
@@ -310,12 +310,12 @@ const Home = () => {
             <details className="group bg-white p-5 rounded-xl shadow-md">
               <summary className="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
                 What documents do I need for a home loan?
-                <span className="ml-2 group-open:rotate-45 transform transition-transform text-2xl">
+                <span className="ml-2 group-open:rotate-45 transform transition-transform text-2xl text-blue-600">
                   +
                 </span>
               </summary>
               <p className="mt-3 text-gray-600">
-                Generally, you’ll need to provide identity proof (like Aadhaar
+                Generally, you'll need to provide identity proof (like Aadhaar
                 card, PAN card, passport), address proof, income proof (salary
                 slips, IT returns, bank statements), property documents, and
                 recent passport-sized photographs. Requirements may vary
@@ -330,7 +330,7 @@ const Home = () => {
             <details className="group bg-white p-5 rounded-xl shadow-md">
               <summary className="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
                 How does my credit score impact my finances?
-                <span className="ml-2 group-open:rotate-45 transform transition-transform text-2xl">
+                <span className="ml-2 group-open:rotate-45 transform transition-transform text-2xl text-blue-600">
                   +
                 </span>
               </summary>
@@ -349,7 +349,7 @@ const Home = () => {
             <details className="group bg-white p-5 rounded-xl shadow-md">
               <summary className="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
                 How is my credit score calculated?
-                <span className="ml-2 group-open:rotate-45 transform transition-transform text-2xl">
+                <span className="ml-2 group-open:rotate-45 transform transition-transform text-2xl text-blue-600">
                   +
                 </span>
               </summary>
@@ -359,7 +359,7 @@ const Home = () => {
                 utilization (how much of your credit limit you use), length of
                 your credit history, types of credit you hold (secured and
                 unsecured loans), and the number of recent loan or credit
-                inquiries you’ve made. Consistent, responsible credit behavior
+                inquiries you've made. Consistent, responsible credit behavior
                 helps build a healthy credit score.
               </p>
             </details>
@@ -368,7 +368,7 @@ const Home = () => {
             <details className="group bg-white p-5 rounded-xl shadow-md">
               <summary className="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
                 How long does it take to get a personal loan?
-                <span className="ml-2 group-open:rotate-45 transform transition-transform text-2xl">
+                <span className="ml-2 group-open:rotate-45 transform transition-transform text-2xl text-blue-600">
                   +
                 </span>
               </summary>
@@ -387,7 +387,7 @@ const Home = () => {
             <details className="group bg-white p-5 rounded-xl shadow-md">
               <summary className="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
                 Do loan applications impact my credit score?
-                <span className="ml-2 group-open:rotate-45 transform transition-transform text-2xl">
+                <span className="ml-2 group-open:rotate-45 transform transition-transform text-2xl text-blue-600">
                   +
                 </span>
               </summary>
