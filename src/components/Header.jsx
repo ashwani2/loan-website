@@ -54,7 +54,6 @@ const Header = () => {
               { name: "Admin", path: "/admin/login" },
               { name: "About", path: "/about" },
               { name: "EMI Calculator", path: "/emi-calculator" },
-              { name: "Contact", path: "/contact" },
             ].map((item, index) => (
               <li key={index}>
                 <Link
@@ -86,6 +85,7 @@ const Header = () => {
                   {[
                     { name: "Credit Card", path: "/loans/credit-card" },
                     { name: "Business Loan", path: "/loans/business-loan" },
+                    { name: "Digital Personal Loan", path: "/loans/personal-loan" },
                     { name: "Home Loan", path: "/loans/home-loan" },
                     { name: "Gold Loan", path: "/loans/gold-loan" },
                   ].map((loan, index) => (

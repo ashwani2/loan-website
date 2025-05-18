@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   const loanSectionRef = useRef(null);
+  const learningSectionRef = useRef(null);
 
-  const scrollToLoanSection = () => {
-    loanSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -13,13 +14,15 @@ const Home = () => {
       {/* Hero Section */}
       <div className="flex flex-col items-center justify-center min-h-screen">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-800">
-          Welcome to Loan Website
+          Welcome to FastFi Connect LLP
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 mt-4">
-          Easily calculate your EMI and manage your loans effectively.
+        <p className="text-lg md:text-xl text-gray-600 mt-4 max-w-2xl">
+          Instant financial solutions powered by cutting-edge fintech. FastFi
+          combines speed ("Fast") with finance ("Fi") to deliver seamless,
+          technology-driven services.
         </p>
         <button
-          onClick={scrollToLoanSection}
+          onClick={() => scrollToSection(loanSectionRef)}
           className="mt-6 px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition"
         >
           Get Started
@@ -34,7 +37,7 @@ const Home = () => {
         </h2>
         <div className="border-b-4 border-blue-600 w-24 mx-auto mt-2"></div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10 px-4 md:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mt-10 px-4 md:px-12">
           {[
             {
               name: "Credit Card",
@@ -60,6 +63,12 @@ const Home = () => {
               color: "bg-yellow-200",
               path: "/loans/gold-loan",
             },
+            {
+              name: "Digital Personal Loan",
+              icon: "📱",
+              color: "bg-blue-100",
+              path: "/loans/digital-personal-loan",
+            },
           ].map((item, index) => (
             <Link key={index} to={item.path}>
               <div className="flex flex-col items-center bg-white shadow-md p-4 rounded-xl hover:shadow-lg transition cursor-pointer">
@@ -81,8 +90,8 @@ const Home = () => {
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
           <div className="flex flex-col justify-center">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-800">
-              Check your credit,
-              <br /> <span className="text-blue-600">for free</span>
+              On The Basis of your,
+              <br /> <span className="text-blue-600">Credit Score</span>
             </h3>
             <p className="mt-4 text-gray-600">
               Understand your current financial position and how to improve it.
@@ -183,7 +192,10 @@ const Home = () => {
                 <p className="text-gray-600 mb-4">
                   We make complex financial topics simple
                 </p>
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+                <button
+                  onClick={() => scrollToSection(learningSectionRef)}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+                >
                   Learning Center
                 </button>
               </div>
@@ -202,7 +214,7 @@ const Home = () => {
       </section>
 
       {/* Learning Center Section */}
-      <div className="py-16 bg-blue-700 text-white">
+      <div ref={learningSectionRef} className="py-16 bg-blue-700 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <h3 className="text-3xl font-bold mb-6">Learning Center</h3>
           <p className="text-blue-200 mb-12">
@@ -214,35 +226,49 @@ const Home = () => {
               {
                 title: "The Ultimate Guide to Credit Score",
                 tag: "Credit Score",
-                img: "/images/credit-guide.jpg", // Replace with real images
+                alt: "Credit score infographic",
+                img: "/images/credit-score.png",
+                source:
+                  "https://blog.nationwide.com/family-life/on-your-own/understanding-your-credit-score-infographic/",
               },
               {
                 title: "6 Top Tips to Increase Home Loan Eligibility",
                 tag: "Home Loan",
-                img: "/images/home-loan.jpg",
+                alt: "Home loan eligibility tips infographic",
+                img: "/images/10693057.jpg",
+                source:
+                  "https://bethkobliner.com/advice_basics/infographic-credit-score-history",
               },
               {
                 title: "What Is 70/30 Rule In Investing And Managing Money?",
                 tag: "Money Management",
-                img: "/images/money-management.jpg",
+                alt: "70/30 investing rule infographic",
+                img: "/images/2598572.jpg",
+                source:
+                  "https://www.equifax.com/personal/education/credit/score/articles/-/learn/what-affects-credit-score-infographic",
               },
             ].map((item, index) => (
-              <div
+              <a
                 key={index}
-                className="bg-white text-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition"
+                href={item.source}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white text-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition"
               >
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="h-48 w-full object-cover"
-                />
+                <div className="h-48 w-full overflow-hidden">
+                  <img
+                    src={item.img}
+                    alt={item.alt}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
                 <div className="p-4">
                   <span className="text-blue-600 text-sm font-semibold">
                     {item.tag}
                   </span>
                   <h4 className="text-lg font-bold mt-2">{item.title}</h4>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -378,67 +404,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <footer className="bg-gray-100 py-10 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Brand Info */}
-          <div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Lending Art(India)
-            </h3>
-            <p className="text-gray-600">
-              At Lending Art(India) Financial Services LLP, we help you achieve
-              your financial goals with smarter loan solutions, expert advice,
-              and personalized services.
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-xl font-semibold text-gray-800 mb-4">
-              Quick Links
-            </h4>
-            <ul className="space-y-2 text-gray-600">
-              <li>
-                <a href="#" className="hover:text-gray-800 transition-colors">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-800 transition-colors">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-800 transition-colors">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-800 transition-colors">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-xl font-semibold text-gray-800 mb-4">
-              Contact Us
-            </h4>
-            <ul className="space-y-2 text-gray-600">
-              <li>📞 +91-9876543210</li>
-              <li>✉️ support@lendingartindia.com</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom line */}
-        <div className="border-t mt-10 pt-6 text-center text-gray-500 text-sm">
-          © {new Date().getFullYear()} Lending Art(India) Financial Services
-          LLP. All rights reserved.
-        </div>
-      </footer>
     </div>
   );
 };
